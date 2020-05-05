@@ -1,0 +1,64 @@
+@model BeltWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-8">
+            <h1>Dojo Activity Center</h1>
+        </div>
+        <div class="col-2 pt-2">
+            <a href="/beltdashboard">Home</a>
+        </div>
+        <div class="col-2 pt-2">
+            <a href="logout">Logout</a>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-10">
+            <h2>@Model.Sport.Title</h2>
+        </div>
+            @if (@Model.User.UserId == @Model.Sport.UserId)
+            {
+                <a href="/delete/@Model.Sport.SportId">Delete</a>
+            }
+            else
+            {
+                bool JoinSport = false;
+                @foreach (var association in @Model.User.CreatedAssociation)
+                {
+                    if (@Model.Sport.AllAssociations.Contains(association))
+                    {
+                        JoinSport = true;
+                        <a href="/leave/@Model.Sport.SportId">Leave</a>
+                    }
+                }
+                @if (!JoinSport)
+                {
+                    <a href="/join/@Model.Sport.SportId">Join</a>
+                }
+            }
+    </div>
+    <div class="row pt-3 pl-5">
+        <div class="col-12 pt-3">
+            <h4>Event Coordinatior: @Model.User.FirstName</h4>
+        </div>
+        <div class="col-12 pt-3">
+            <h4>Description:</h4>
+            <h5>@Model.Sport.Description</h5>
+        </div>
+    </div>
+    <div class="row pt-5 pl-2">
+        <div class="col-12">
+            <h4>Participants:</h4>
+        </div>
+        <div class="col-12 pt-3 pl-4">
+            @foreach (var p in @Model.Sport.AllAssociations)
+            {
+                <h5>- @p.User.FirstName @p.User.LastName</h5>
+            }
+        </div>
+    </div>
+</div>

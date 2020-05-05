@@ -1,0 +1,26 @@
+@model ThisWrapper
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-8"><h1>@Model.ThisWedding.WedderOne and @Model.ThisWedding.WedderTwo Wedding</h1></div>
+                <div class="col"><a href="/dashboard">Dashboard</a> | <a href="logout">Logout</a></div>
+            </div>
+            <div class="row">
+                <div class="col"><h3>Date: @Model.ThisWedding.Date.ToLongDateString()</h3></div>
+            </div>
+            <div class="row">
+                <div class="col">Guests:</div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col">
+                @foreach (var i in Model.ThisWedding.UsersfromWedding)
+                {
+                    <p>@i.User.FirstName @i.User.LastName</p>
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

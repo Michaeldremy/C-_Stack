@@ -1,0 +1,11 @@
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\bin\Debug\netcoreapp2.2\Collections_Practice.deps.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\bin\Debug\netcoreapp2.2\Collections_Practice.runtimeconfig.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\bin\Debug\netcoreapp2.2\Collections_Practice.runtimeconfig.dev.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\bin\Debug\netcoreapp2.2\Collections_Practice.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\bin\Debug\netcoreapp2.2\Collections_Practice.pdb
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.csprojAssemblyReference.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.csproj.CoreCompileInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.AssemblyInfoInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.AssemblyInfo.cs
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Collections_Practice\obj\Debug\netcoreapp2.2\Collections_Practice.pdb

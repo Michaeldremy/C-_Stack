@@ -1,0 +1,89 @@
+@model WallWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-7">
+            <h1>The Coding Dojo Wall</h1>
+        </div>
+        <div class="col-3 pt-3">
+            <h4>Welcome, @Model.User.FirstName!</h4>
+        </div>
+        <div class="col-2 text-center pt-2">
+            <a href="/"><button type="submit" class="btn btn-primary">Log Out</button></a>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ___________________________________________________________________________________________________________________________________________________________________
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+            <h3 style="color: blue;">Post a message</h3>
+        </div>
+        <form action="createmessage" method="POST">
+            <div class="col-12">
+                <span asp-validation-for="Message.Msg"></span>
+            </div>
+            <div class="col-12">
+                <textarea asp-for="Message.Msg"cols="134" rows="3"></textarea>
+            </div>
+            <div class="col-11">
+                <button type="submit" class="btn btn-primary float-right">Post a Message</button>
+            </div>
+        </form>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+            @foreach (var u in @Model.AllMessages)
+            {
+                @* This if statement is saying if the logged in user matches the user who created the message, then they can delete their message. *@
+                @if (@Model.User.UserId == @u.UserId)
+                {
+                    <div class="row">
+                        <div class="col-5 pt-2">
+                            <h5 style="color: blue;">@u.User.FirstName @u.User.LastName - @u.User.CreatedAt.ToLongDateString()</h5>
+                        </div>
+                        <div class="col-7">
+                            <a href="delete/@u.UserId"><button type="submit" class="btn btn-dark">Delete Message</button></a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <h5 style="color: blue;">@u.User.FirstName @u.User.LastName - @u.User.CreatedAt.ToLongDateString()</h5>
+                }
+                @* Line 60 is going insie "u" from line 42 and it is already going inside of AllMessages... "m" = @u.AllMessages -> @u.User.CreatedMessages -> @m.Msg*@
+                @foreach (var m in @u.User.CreatedMessages)
+                {
+                    <h5 class="pl-2">@m.Msg</h5>
+                @foreach (var c in @m.AllComments)
+                {
+                    <h5 class="pl-4" style="color: red;">@c.User.FirstName @c.User.LastName - @c.User.CreatedAt.ToLongDateString()</h5>
+                    <h5 class="pl-5">@c.Cmt</h5>
+                }
+                    <div class="row pt-5">
+                        <div class="col-12">
+                            <h3 style="color: red;">Post a Comment</h3>
+                        </div>
+                        <form asp-action="createcomment" method="POST" asp-controller="Home" asp-route-messageId="@m.MessageId">
+                            <div class="col-12">
+                                <span asp-validation-for="Comment.Cmt"></span>
+                            </div>
+                            <div class="col-12">
+                                <textarea asp-for="Comment.Cmt"cols="134" rows="3"></textarea>
+                            </div>
+                            <div class="col-11">
+                                <button type="submit" class="btn btn-danger float-right">Post a Comment</button>
+                            </div>
+                        </form>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+@model Transaction
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-7">
+            <h1>Welcome @ViewBag.oneUser.FirstName @ViewBag.oneUser.LastName</h1>
+        </div>
+        <div class="col-2 pt-3">
+            <span asp-validation-for="Amount" style="color: red;"></span>
+            <label asp-for="Amount">Current Balance: @ViewBag.Balance.ToString("0.00")</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            ______________________________________________________________________________________
+        </div>
+    </div>
+    <form asp-action="UpdateBalance" asp-controller="Home" method="POST">
+        <div class="form-group row text-center pt-5">
+            <div class="col-2">
+                <p>Deposit/Withdraw:</p>
+            </div>
+            <div class="col-2">
+                <input type="number" asp-for="Amount">
+            </div>
+            <div class="col-3">
+                <a href=""><button type="submit" class="btn btn-primary">Submit</button></a>
+            </div>
+        </div>
+    </form>
+    <div class="row pt-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var t in ViewBag.oneUser.CreatedTransactions)
+                {
+            <tr>
+                <td>@t.Amount.ToString("0.00")</td>
+                <td>@t.CreatedAt.ToLongDateString()</td>
+            </tr>
+                }
+        </tbody>
+    </table>
+    </div>
+</div>

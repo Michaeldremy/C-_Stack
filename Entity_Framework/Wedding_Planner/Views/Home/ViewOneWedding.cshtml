@@ -1,0 +1,36 @@
+@model WeddingWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-8">
+            <h1>@Model.Wedding.Wedder_One & @Model.Wedding.Wedder_Two's Wedding</h1>
+        </div>
+        <div class="col-2 pt-2 text-center">
+            <a href="/dashboard"><button type="submit" class="btn btn-primary">Dashboard</button></a>
+        </div>
+        <div class="col-2 pt-2 text-center">
+            <a href=""><button type="submit" class="btn btn-primary">Logout</button></a>
+        </div>
+    </div>
+    <div class="row pt-5 pl-5">
+        <div class="col-6">
+            <h4>Date: <span style="color: blue;">@Model.Wedding.Date.ToLongDateString()</span></h4>
+        <div class="col-12 pt-4">
+            <h4>Guests:</h4>
+            <div class="col-12 pl-5 pt-4">
+                @foreach (var person in @Model.Wedding.AllUsers)
+                {
+                    <h4>@person.User.FirstName @person.User.LastName</h4>
+                }
+            </div>
+        </div>
+        </div>
+        <div class="col-6">
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=@Model.Wedding.Wedding_Address&key=AIzaSyAaY398y15b65z9lhVqyvzSWCSZiFP0Qco" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

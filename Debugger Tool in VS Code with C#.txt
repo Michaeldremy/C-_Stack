@@ -1,0 +1,27 @@
+Debugger Tool
+
+Continue:
+Q: The debugger is stopped within OuterFunc( ), on a line that is about to call InnerFunc( ). 
+If you press "Continue", what happens?
+
+A: The debugger runs uninterrupted, until either the program ends OR it hits another breakpoint.
+
+Step into:
+Q: The debugger is stopped within OuterFunc( ), on a line that is about to call InnerFunc( ). 
+If you press "Step Into", what happens?
+
+A: The debugger will take a single step into InnerFunc( ), stopping at the first line of that function.
+
+Step Step  Over:
+Q: he debugger is stopped within OuterFunc( ), on a line that is about to call InnerFunc( ). 
+If you press "Step Over", what happens?
+
+A: The debugger will step over the next line -- in other words, it will call InnerFunc( ) 
+and will stop in OuterFunc( ) immediately after that function returns.
+
+Step Out:
+Q: The debugger is stopped within OuterFunc( ), on a line that is about to call InnerFunc( ). 
+If you press "Step Out", what will the debugger do?
+
+A: The debugger will run the rest of OuterFunc( ), including InnerFunc( ), 
+and will stop in the function that called OuterFunc( ) originally.

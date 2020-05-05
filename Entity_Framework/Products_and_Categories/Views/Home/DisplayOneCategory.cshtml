@@ -1,0 +1,41 @@
+@model ProdCatWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-5 text-center">
+            <h2 style="color: red;">@Model.Category.Name</h2>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-9">
+            <h3>Products:</h3>
+            @* This is not working just yet *@
+            @foreach (var p in @Model.Category.ProductAssociation)
+            {
+            <ul>
+                <li>@p.Product.Name</li>
+            </ul>
+            }
+        </div>
+        <div class="col-3 text-center">
+            <h5>Add Product:</h5>
+            <form asp-action="UpdateCateAssociation" asp-controller="Home" asp-route-categoryId="@Model.Category.CategoryId">
+                <div class="col pt-3">
+                    <select asp-for="Association.ProductId" class="custom-select form-control">
+                        @foreach (var c in @Model.Products)
+                        {
+                        <option value="@c.ProductId">@c.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="col pt-3">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

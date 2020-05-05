@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razor Fun!</title>
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+@{
+    String[] foodList = new String[]
+        {
+            "Apple Pie",
+            "Burritos",
+            "Clams Casino",
+            "Donus"
+        };
+    
+    foreach (var food in foodList)
+    {
+        <div>
+            <p>@food</p>
+            @if(food == "C")
+            {
+                <P style="color:red;">@food</P>
+            }
+        </div>
+    }
+}
+</body>
+</html>

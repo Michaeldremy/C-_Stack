@@ -1,0 +1,75 @@
+{
+  "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\WeddingPlanner.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "WeddingPlanner",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Home\\Wedding.cshtml",
+      "TargetPath": "Views\\Home\\Wedding.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Home\\OneWedding.cshtml",
+      "TargetPath": "Views\\Home\\OneWedding.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\Home\\Dashboard.cshtml",
+      "TargetPath": "Views\\Home\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Micha\\Desktop\\C#_Stack\\WeddingPlanner\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

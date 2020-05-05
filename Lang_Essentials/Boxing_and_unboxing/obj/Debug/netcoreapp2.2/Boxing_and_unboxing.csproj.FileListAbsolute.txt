@@ -1,0 +1,11 @@
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\bin\Debug\netcoreapp2.2\Boxing_and_unboxing.deps.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\bin\Debug\netcoreapp2.2\Boxing_and_unboxing.runtimeconfig.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\bin\Debug\netcoreapp2.2\Boxing_and_unboxing.runtimeconfig.dev.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\bin\Debug\netcoreapp2.2\Boxing_and_unboxing.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\bin\Debug\netcoreapp2.2\Boxing_and_unboxing.pdb
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.csprojAssemblyReference.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.csproj.CoreCompileInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.AssemblyInfoInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.AssemblyInfo.cs
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Boxing_and_unboxing\obj\Debug\netcoreapp2.2\Boxing_and_unboxing.pdb

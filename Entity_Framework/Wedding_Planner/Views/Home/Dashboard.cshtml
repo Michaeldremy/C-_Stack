@@ -1,0 +1,64 @@
+@model WeddingWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-11 text">
+            <h1>Welcome to the Wedding Planner</h1>
+        </div>
+        <div class="col-1 pt-2">
+            <a href=""><button type="submit" class="btn btn-primary">Logout</button></a>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Wedding</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Guest</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var w in @Model.Weddings)
+                    {
+                <tr>
+                    <td><a href="wedding/@w.WeddingId">@w.Wedder_One & @w.Wedder_Two</a></td>
+                    <td>@w.Date.ToLongDateString()</td>
+                    <td>@w.AllUsers.Count</td>
+                    <td>@if (@Model.User.UserId == @w.UserId)
+                        {
+                            <a href="delete/@w.WeddingId">Delete</a>
+                        }
+                        else
+                        {
+                            bool RSVP = false;
+                            @foreach (var association in @Model.User.AllWeddings)
+                            {
+                                @if (w.AllUsers.Contains(association))
+                                {
+                                    RSVP = true;
+                                    <a href="unrsvp/@w.WeddingId">UN-RSVP</a>
+                                }
+                            }
+                            @if (!RSVP)
+                            {
+                                <a href="rsvp/@w.WeddingId">RSVP</a>
+                            }
+                        }
+                    </td>
+                </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="planwedding"><button type="submit" class="btn btn-primary float-right">New Wedding</button></a>
+        </div>
+    </div>
+</div>

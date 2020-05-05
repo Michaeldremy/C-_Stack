@@ -1,0 +1,71 @@
+@model BeltWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-8">
+            <h1>Dojo Activity Center</h1>
+        </div>
+        <div class="col-2 pt-2">
+            Welcome, @Model.User.FirstName
+        </div>
+        <div class="col-2 pt-2">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Date and Time</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Event Cordinator</th>
+                    <th scope="col">No. of Participants</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in @Model.AllSports)
+                {
+                <tr>
+                    <td><a href="activity/@s.SportId">@s.Title</a></td>
+                    <td>@s.Date.ToLongDateString() at @s.Time.ToString("hh:mm tt")</td>
+                    <td>@s.Duration @s.DurationType</td>
+                    <td>@s.User.FirstName</td>
+                    <td>@s.AllAssociations.Count</td>
+                    <td>@if (@Model.User.UserId == @s.UserId)
+                        {
+                            <a href="delete/@s.SportId">Delete</a>
+                        }
+                        else
+                        {
+                            bool JoinSport = false;
+                            @foreach (var association in @Model.User.CreatedAssociation)
+                            {
+                                if (@s.AllAssociations.Contains(association))
+                                {
+                                    JoinSport = true;
+                                    <a href="leave/@s.SportId">Leave</a>
+                                }
+                            }
+                            @if (!JoinSport)
+                            {
+                                <a href="join/@s.SportId">Join</a>
+                            }
+                        }
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-12">
+                <a href="planactivity"><button class="btn btn-primary">New Activity</button></a>
+            </div>
+        </div>
+    </div>
+</div>

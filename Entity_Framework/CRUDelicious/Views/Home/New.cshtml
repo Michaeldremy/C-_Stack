@@ -1,0 +1,74 @@
+@model Dish
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-5 text-center">
+        <div class="col-12">
+            <h1>Add a new Dish!</h1>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col">
+            <a href="/"><button type="submit" class="btn btn-primary">Home</button></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form asp-action="createdish" asp-controller="Home" method="POST">
+                <div class="form-group row pt-5">
+                    <span style="color:red" class="col-12" asp-validation-for="Chef"></span>
+                    <label asp-for="Chef" class="col-sm-2 col-form-label text-center"></label>
+                    <div class="col-8 text-center">
+                        <span style="color:red" class="col-12" asp-validation-for="Tastiness"></span>
+                        <label asp-for="Tastiness" class="col-sm-2 col-form-label text-center"></label>
+                    </div>
+                    <div class="col-2">
+                        <span style="color:red" class="col-12" asp-validation-for="Description"></span>
+                        <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-2 mr-5">
+                            <input asp-for="Chef" class="form-control text-center" placeholder="Enter chef's name">
+                        </div>
+                            <div class="col-3 text-center" style="margin-left: 200px;">
+                                <select asp-for="Tastiness" class="custom-select mr-sm-2 form-control">
+                                    <option value="">Choose a option</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="col-3" style="margin-left: 122px;">
+                                <textarea asp-for="Description" cols="4" rows="5" class="form-control" style="resize: none;"></textarea>
+                            </div>
+                            <div class="col-3" style="padding-left: 905px; padding-top: 15px;">
+                                <a href="/"><button type="submit" class="btn btn-primary" style="width: 150px;">Add the dish!</button></a>
+                            </div>
+                    </div>
+                <div class="form-group row pt-5">
+                    <label asp-for="Name" class="col-sm-2 col-form-label text-center"></label>
+                </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <span style="color:red" class="col-12" asp-validation-for="Name"></span>
+                            <input asp-for="Name" class="form-control text-center" placeholder="Enter dish name">
+                        </div>
+                    </div>
+                <div class="form-group row pt-5">
+                    <label asp-for="Calories" class="col-sm-2 col-form-label text-center"></label>
+                </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <input asp-for="Calories" class="form-control text-center">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

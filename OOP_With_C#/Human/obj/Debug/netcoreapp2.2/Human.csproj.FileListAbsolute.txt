@@ -1,0 +1,11 @@
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\bin\Debug\netcoreapp2.2\Human.deps.json
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\bin\Debug\netcoreapp2.2\Human.runtimeconfig.json
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\bin\Debug\netcoreapp2.2\Human.runtimeconfig.dev.json
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\bin\Debug\netcoreapp2.2\Human.dll
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\bin\Debug\netcoreapp2.2\Human.pdb
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.csprojAssemblyReference.cache
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.csproj.CoreCompileInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.AssemblyInfoInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.AssemblyInfo.cs
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.dll
+C:\Users\Micha\Desktop\C#_Stack\OOP_With_C#\Human\obj\Debug\netcoreapp2.2\Human.pdb

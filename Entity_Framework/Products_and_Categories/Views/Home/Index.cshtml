@@ -1,0 +1,57 @@
+﻿@model ProdCatWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-12 text-center">
+            <span class="mr-3">Products</span> | <a href="/categories"><button type="submit" class="btn btn-primary ml-3">Categories</button></a>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-6 text-center">
+            <h3>New Product</h3>
+            <form asp-action="createproduct" method="POST">
+                <div class="form-group row text-center pt-5 pl-5">
+                    <span asp-validation-for="Product.Name"></span>
+                    <label asp-for="Product.Name" class="col-sm-2 col-form-label"></label>
+                    <div class="col-8 pl-3">
+                        <input asp-for="Product.Name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row text-center pt-5 pl-5">
+                    <span asp-validation-for="Product.Description"></span>
+                    <label asp-for="Product.Description" class="col-sm-2 col-form-label"></label>
+                    <div class="col-8 pl-3">
+                        <input asp-for="Product.Description" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row text-center pt-5 pl-5">
+                    <span asp-validation-for="Product.Price"></span>
+                    <label asp-for="Product.Price" class="col-sm-2 col-form-label"></label>
+                    <div class="col-8 pl-3">
+                        <input type="number" step=".01" asp-for="Product.Price" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row text-center">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Create!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6 text-center">
+            <h3>Existing Products</h3>
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+                    @foreach (var i in @Model.Products)
+                    {
+                        <a href="products/@i.ProductId"><h4>@i.Name</h4></a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

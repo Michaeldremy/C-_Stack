@@ -1,0 +1,14 @@
+@using ViewModel_Fun.Models
+@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h3>Welcome all Users!</h3>
+    @foreach (var user in Model)
+    {
+        <p>@user.FirstName @user.LastName</p>
+    }
+</div>

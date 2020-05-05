@@ -1,0 +1,14 @@
+System.Console.WriteLine(" _______  _______  __   __  _______    _______  __   __  _______  ______     ");
+System.Console.WriteLine("|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |    ");
+System.Console.WriteLine("|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||    ");
+System.Console.WriteLine("|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_   ");
+System.Console.WriteLine("|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  |  ");
+System.Console.WriteLine("|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | |  ");
+System.Console.WriteLine("|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_|  ");
+System.Console.WriteLine(" _______  ______    __   __    _______  _______  _______  ___   __    _  __  ");
+System.Console.WriteLine("|       ||    _ |  |  | |  |  |   _   ||       ||   _   ||   | |  |  | ||  | ");
+System.Console.WriteLine("|_     _||   | ||  |  |_|  |  |  |_|  ||    ___||  |_|  ||   | |   |_| ||  | ");
+System.Console.WriteLine("  |   |  |   |_||_ |       |  |       ||   | __ |       ||   | |       ||  | ");
+System.Console.WriteLine("  |   |  |    __  ||_     _|  |       ||   ||  ||       ||   | |  _    ||__| ");
+System.Console.WriteLine("  |   |  |   |  | |  |   |    |   _   ||   |_| ||   _   ||   | | | |   | __  ");
+System.Console.WriteLine("  |___|  |___|  |_|  |___|    |__| |__||_______||__| |__||___| |_|  |__||__| ");

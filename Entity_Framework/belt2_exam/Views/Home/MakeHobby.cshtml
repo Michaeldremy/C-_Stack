@@ -1,0 +1,28 @@
+@model Hobby
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Create a Hobby</h1>
+        </div>
+        <form action="createhobby" method="POST">
+            <div class="col-6 pt-5">
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name">
+            </div>
+                <div class="col-6 pt-5">
+                <span asp-validation-for="Description"></span>
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" cols="80" rows="5"></textarea>
+            </div>
+            <div class="col-12 pt-5">
+                <button type="submit">Create Hobby</button>
+            </div>
+        </form>
+    </div>
+</div>

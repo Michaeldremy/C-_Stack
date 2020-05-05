@@ -1,0 +1,11 @@
+@using ViewModel_Fun.Models
+@model User
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center">
+    <h4 class="display-4">Here is a user!</h4>
+    <h1>@Model.FirstName @Model.LastName</h1>
+</div>

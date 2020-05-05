@@ -1,0 +1,63 @@
+@using Dojo_Survey.Models
+@model DojoSurvey
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 pt-5 border border-dark mt-4">
+                <form asp-action="Result" asp-controller="Home" method="POST">
+                    <div class="form-group row">
+                        @* The line ↓ is a test to see if the validation will go on a line above the required name *@
+                        <span style="color:red" class="col-12" asp-validation-for="Name"></span>
+                            <label class="col-sm-3 col-form-label text-center" asp-for="Name"></label>
+                        <div class="col-sm-9">
+                            <input type="name" class="form-control" asp-for="Name" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:red" class="col-12" asp-validation-for="Location"></span>
+                            <label class="col-sm-3 col-form-label text-center" asp-for="Location"></label>
+                        <div class="col-sm-9">
+                            <select class="custom-select mr-sm-2 form-control" asp-for="Location">
+                                <option value="">Choose an option</option>
+                                <option value="San Jose">San Jose</option>
+                                <option value="Seattle">Seattle</option>
+                                <option value="New York">New York</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:red" class="col-12" asp-validation-for="Language"></span>
+                            <label class="col-sm-3 col-form-label text-center" asp-for="Language"></label>
+                        <div class="col-sm-9">
+                            <select class="custom-select mr-sm-2 form-control" asp-for="Language">
+                                <option value="">Choose an option</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="C#">C#</option>
+                                <option value="Python">Python</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span style="color:red" class="col-12" asp-validation-for="Comment"></span>
+                        <label for="exampleFormControlTextarea1" class="pl-3" asp-for="Comment"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="Comment" placeholder="Enter a comment if you'd like"></textarea>
+                    </div>
+                        <button type="submit" class="btn btn-primary mb-2 pull-right">Submit Survey</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

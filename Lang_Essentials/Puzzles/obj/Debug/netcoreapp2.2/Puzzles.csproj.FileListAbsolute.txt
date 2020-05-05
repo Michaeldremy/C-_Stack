@@ -1,0 +1,11 @@
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\bin\Debug\netcoreapp2.2\Puzzles.deps.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\bin\Debug\netcoreapp2.2\Puzzles.runtimeconfig.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\bin\Debug\netcoreapp2.2\Puzzles.runtimeconfig.dev.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\bin\Debug\netcoreapp2.2\Puzzles.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\bin\Debug\netcoreapp2.2\Puzzles.pdb
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.csprojAssemblyReference.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.csproj.CoreCompileInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.AssemblyInfoInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.AssemblyInfo.cs
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Puzzles\obj\Debug\netcoreapp2.2\Puzzles.pdb

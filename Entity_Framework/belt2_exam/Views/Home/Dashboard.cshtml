@@ -1,0 +1,39 @@
+@model BeltWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-10 text-center">
+            <h1>Hobbies</h1>
+        </div>
+        <div class="col-2">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Enthusiasts</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var h in @Model.Hobbies)
+                {
+                    
+                <tr>
+                    <td><a href="hobby/@h.HobbyId">@h.Name</a></td>
+                    <td>@h.AllAssociations.Count</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div class="col pt-3">
+            <a href="/Hobby/New">Create a Hobby</a>
+        </div>
+    </div>
+</div>

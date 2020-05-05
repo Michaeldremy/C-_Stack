@@ -1,0 +1,78 @@
+@model BeltWrapper
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-12">
+            <h1>@Model.Hobby.Name</h1>
+        </div>
+    </div>
+    <div class="col-12 pt-5">
+        <h4>Description: @Model.Hobby.Description</h4>
+    </div>
+    <div class="row">
+        <div class="col-6 pt-5 text-center">
+            <h5>@Model.Hobby.Name Enthusiasts:</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in @Model.Hobby.AllAssociations)
+                    {
+                    <tr>
+                        <td>@p.User.FirstName @p.User.LastName</td>
+                        @foreach (var h in @Model.Proficiencies)
+                        {
+                        <td>@h.ProficiencyLevel</td>
+                        }
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6 text-center pt-5">
+            <h5>Become an Enthusiast</h5>
+            @if (Model.User.UserId == @Model.Hobby.UserId)
+            {
+                <p>You are already apart of the group!</p>
+            }
+            else
+            {
+                bool JoinHobby = false;
+                @foreach (var association in @Model.User.CreatedAssociations)
+                {
+                    if (Model.Hobby.AllAssociations.Contains(association))
+                    {
+                        JoinHobby = true;
+                        <p>You are already apart of the group, have fun!</p>
+                    }
+                }
+                @if (!JoinHobby)
+                {
+                    <form asp-action="HPAssociation" method="POST" asp-route-proficiencyId="@Model.Proficiency.ProficiencyId">
+                        <div class="col pt-3">
+                            <select asp-for="Proficiency.ProficiencyLevel">
+                                <option value="Novice">Novice</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+                        @* <div class="col pt-3">
+                            <button type="submit">Add</button>
+                        </div> *@
+                    <div class="col pt-3">
+                        <a href="/join/@Model.Hobby.HobbyId"><button type="submit">Add to Hobbies</button></a>
+                    </div>
+                    </form>
+                }
+            }
+        </div>
+    </div>
+</div>

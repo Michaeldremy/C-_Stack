@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Test</title>
+</head>
+<body>
+    <!--By using a @{} we can start embedding C# code within our HTML-->
+@{
+    var StringList = new List<string>
+    {
+        "one",
+        "two",
+        "three",
+        "four"
+    };
+        
+    foreach(var word in StringList)
+    {
+    // We can render HTML from within C# code!
+    // Note that in order to use the "word" variable inside our HTML we have to preface it with the @ symbol again.
+        <div>
+            <p>@word</p>
+            @if(word.Length < 4)
+            {
+                <p>@word is a short word</p>
+            }
+        </div>
+    }
+}
+    <div>
+        <a href="/projects">Click to See projects!</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.csprojAssemblyReference.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.csproj.CoreCompileInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.AssemblyInfoInputs.cache
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.AssemblyInfo.cs
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\bin\Debug\netcoreapp2.2\Basic_13.deps.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\bin\Debug\netcoreapp2.2\Basic_13.runtimeconfig.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\bin\Debug\netcoreapp2.2\Basic_13.runtimeconfig.dev.json
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\bin\Debug\netcoreapp2.2\Basic_13.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\bin\Debug\netcoreapp2.2\Basic_13.pdb
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.dll
+C:\Users\Micha\Desktop\C#_Stack\Lang_Essentials\Basic_13\obj\Debug\netcoreapp2.2\Basic_13.pdb

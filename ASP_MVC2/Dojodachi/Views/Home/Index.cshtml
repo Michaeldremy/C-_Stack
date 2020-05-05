@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-3">
+            <h5>Fullness: @ViewBag.Fullness</h5>
+        </div>
+        <div class="col-3">
+            <h5>Happiness: @ViewBag.Happiness</h5>
+        </div>
+        <div class="col-3">
+            <h5>Meals: @ViewBag.Meals</h5>
+        </div>
+        <div class="col-3">
+            <h5>Energy: @ViewBag.Energy</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center pt-3 pb-3">
+            <img src="~/imgs/dojodachi.jpg" style="width:350px;" alt="">
+            <h4 class="pt-3">@ViewBag.Message</h4>
+        </div>
+    </div>
+    <div class="row text-center">
+            @if (ViewBag.Fullness >= 100 && ViewBag.Happiness >= 100 && ViewBag.Energy >= 100 || ViewBag.Fullness <= 0 || ViewBag.Happiness <= 0)
+            {
+                <div class="col-12 text-center">
+            <form action="/clear" method="POST">
+                <button type="submit">Play again!</button>
+            </form>
+                </div>
+            }
+            else
+            {
+            <div class="col-3">
+                <form action="/feeding" method="POST">
+                    <button type="submit">Feed</button>
+                </form>
+            </div>
+                    <div class="col-3">
+                <form action="/playing" method="POST">
+                    <button type="submit">Play</button>
+                </form>
+            </div>
+                    <div class="col-3">
+                <form action="/working" method="POST">
+                    <button type="submit">Work</button>
+                </form>
+            </div>
+                    <div class="col-3">
+                <form action="/sleeping" method="POST">
+                    <button type="submit">Sleep</button>
+                </form>
+            </div>
+            }
+    </div>
+</div>

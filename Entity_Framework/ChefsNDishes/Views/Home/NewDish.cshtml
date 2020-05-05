@@ -1,0 +1,109 @@
+@model Dish
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pt-5 text-center">
+        <div class="col-12">
+            <h3>Add a Dish!</h3>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            ____________________________________________________
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+            <a href="/"><button type="submit" class="btn btn-primary">Home</button></a>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+            <form asp-action="createdish" asp-controller="Home">
+                <div class="form-group row pt-3 text-center">
+                    <div class="col-4">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="ChefId"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="Tastiness"></label>
+                    </div>
+                </div>
+                @* Validations appear right above the input tag when the get triggered! *@
+                <div class="row text-center">
+                    <div class="col-4">
+                        <span style="color:red" asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <input asp-for="Name" class="form-control text-center" placeholder="Enter the dish name">
+                    </div>
+                    <div class="col-4">
+                        <select asp-for="ChefId" class="form-control text-center">
+                            @foreach (var chef in ViewBag.ViewChefs)
+                            {
+                            <option value="@chef.ChefId">@chef.ChefFirstName @chef.ChefLastName</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select asp-for="Tastiness" class="custom-select form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row pt-5 text-center">
+                    <div class="col-4">
+                        <label asp-for="Calories"></label>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <span style="color:red" asp-validation-for="Calories"></span>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <input asp-for="Calories" class="form-control text-center">
+                    </div>
+                </div>
+                <div class="form-group row pt-5 text-center">
+                    <div class="col-4">
+                        <label asp-for="Description"></label>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <span style="color:red" asp-validation-for="Description"></span>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <textarea asp-for="Description" cols="5" rows="5" class="form-control text-center" style="resize: none;"></textarea>
+                    </div>
+                </div>
+                @* Validations appear right above the input tag when the get triggered! *@
+                @* <div class="row text-center">
+                    <div class="col-3">
+                        <span style="color:red" asp-validation-for="ChefLastName"></span>
+                    </div>  
+                </div> *@
+                    <div class="row text-center pt-3">
+                        <div class="col-4">
+                            <Button type="submit" class="btn btn-primary">Add Dish</Button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

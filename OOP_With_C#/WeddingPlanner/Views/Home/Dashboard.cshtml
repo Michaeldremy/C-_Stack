@@ -1,0 +1,61 @@
+@model ThisWrapper
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-8"><h1>Welcome to the Wedding Planner</h1></div>
+                <div class="col"><h3><a href="logout">Logout</a></h3></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Wedding</th>
+                            <th>Date</th>
+                            <th>Guest</th>
+                            <th>Action</th>
+                        </tr>
+                        @foreach(var l in Model.AllWeddings)
+                        {
+                            <tr>
+                                <td><a href="/wedding/@l.WeddingId">@l.WedderOne & @l.WedderTwo</a></td>
+                                <td>@l.Date</td>
+                                <td>@l.UsersfromWedding.Count()</td>
+                                <td>
+                                    @if(@l.Creator == @Model.ThisUser)
+                                    {
+                                        <a href="delete/@l.WeddingId">Delete</a>
+                                    }
+                                    else
+                                    {
+                                        @if(l.UsersfromWedding.FirstOrDefault(u => u.UserId == Model.ThisUser.UserId) ==null)
+                                        {
+                                            <form asp-action="RSVP" asp-controller="Home" asp-route-wedid="@l.WeddingId" method="post">
+                                                <input type="hidden"asp-for="Association.UserId" value="@Model.ThisUser.UserId">
+                                                <input type="submit" value="RSVP">
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form asp-action="UnRSVP" asp-controller="Home" asp-route-wedid="@l.WeddingId" method="post">
+                                                <input type="hidden"asp-for="Association.UserId" value="@Model.ThisUser.UserId">
+                                                <input type="submit" value="UN-RSVP">
+                                            </form>
+                                        }
+                                    }
+                                    
+
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="/wedding">New Wedding</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

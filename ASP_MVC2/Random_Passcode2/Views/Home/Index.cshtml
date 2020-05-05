@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h4>Random Passcode (passcode #@ViewBag.Count)</h4>
+    <h4>@ViewBag.randPasscode</h4>
+    <br>
+    <br>
+    <form action="/generate" method="POST">
+        <button type="submit">Generate</button>
+    </form>
+    <br>
+    <div>
+        <form action="/clear" method="POST">
+            <button type="submit">Clear Session</button>
+        </form>
+    </div>
+</div>
